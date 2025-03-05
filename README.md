@@ -1,4 +1,4 @@
-**# **Polynomial Regression from Scratch using Gradient Descent**
+# **Polynomial Regression from Scratch using Gradient Descent**
 
 This project implements **Polynomial Regression** using **Gradient Descent**, built purely in Python **without any external libraries like NumPy or Scikit-learn**.
 
@@ -80,39 +80,6 @@ We build a **PolynomialRegression** class with the following methods:
 - **fit(X, y)**: Trains the model using gradient descent.
 - **predict(X)**: Makes predictions using the trained model.
 - **Polynomial Feature Expansion** is done manually without using external libraries.
-
----
-
-## **5. Testing the Model**
-
-### **Sample Dataset**
-
-We generate a **dataset with multiple features** and a polynomial relationship:
-
-```python
-# Sample dataset with multiple features
-np.random.seed(42)
-X = np.random.rand(100, 3)  # 100 samples, 3 features
-y = 3 + 2*X[:, 0] + 4*X[:, 1]**2 + 5*X[:, 2] + np.random.randn(100)  # Polynomial relation
-```
-
-### **Training the Model**
-
-```python
-# Instantiate and train the model
-model = PolynomialRegression(degree=2, learning_rate=0.01, iterations=1000)
-model.fit(X_train, y_train)
-```
-
-### **Making Predictions**
-
-```python
-# Predict and evaluate
-predictions = model.predict(X_test)
-print("Predictions:", predictions[:5])  # Print first 5 predictions
-```
-
----
 
 ### **📌 Summary**
 
